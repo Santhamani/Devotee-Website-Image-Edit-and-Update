@@ -1,0 +1,40 @@
+.body-container{
+  margin-top:100px;
+}
+p{
+  text-indent: 25px;
+  font-family: sans-serif;
+  text-align: justify;
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+#new{
+  padding-top: 10px;
+}
+
+.vericaltext{
+  width:1px;
+  word-wrap: break-word;
+  font-family: monospace; /* this is just for good looks */
+}
+
+a:link{
+  text-decoration: none;
+  /* font-family: 'Lobster', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Berkshire Swash', cursive; */
+  /*padding-left: 50px;*/
+}
+#space{
+  margin-left: 60px;
+}
+
+#zod{
+  margin-top: 10px;
+  /* margin-bottom: 1px; */
+  /* font-family: 'Lobster', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Berkshire Swash', cursive; */
+
+}

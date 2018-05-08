@@ -1,0 +1,65 @@
+<nav class="navbar fixed-top navbar-expand-lg menu">
+  <a class="navbar-brand" routerLink="/devotee">Devotee World</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+
+       <!-- Before Login Navbar Links -->
+       <li class="nav-item icon"*ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" *ngIf="!authService.loggedIn()" routerLink="/astroservices"><img src="assets/images/icons/services.png" class="head" > <span class="icon" id="tex">Astro Services</span></a>
+        </li>
+        <li class="nav-item  icon">
+          <a class="nav-link" *ngIf="!authService.loggedIn()" routerLink="/poojaservices">   <img src="assets/images/icons/pooja.png"><span class="icon" id="tex">Pooja Services</span></a>
+        </li>
+        <li class="nav-item icon">
+          <a class="nav-link" *ngIf="!authService.loggedIn()" routerLink="/devoteeshop">   <img  src="assets/images/icons/shop.png"><span class="icon" id="tex" >Devotee Shop</span></a>
+        </li> 
+        <li class="nav-item icon ">
+          <a class="nav-link" *ngIf="!authService.loggedIn()" routerLink="/talktoastrologers">   <img src="assets/images/icons/phone.png"><span class="icon" id="tex" >Talk to Astrologer</span></a>
+        </li> 
+        <li class="nav-item icon">
+          <a class="nav-link" *ngIf="!authService.loggedIn()" routerLink="/piligrimages">   <img src="assets/images/icons/pilig.png"><span class="icon" id="tex">Piligrimages</span></a>
+        </li> 
+        <li class="nav-item icon">
+          <a class="nav-link" *ngIf="!authService.loggedIn()" routerLink="/onlinecourses">   <img src="assets/images/icons/class.png"><span class="icon" id="tex">Online Courses</span></a>
+        </li> 
+        <li class="nav-item icon">
+          <a class="nav-link"  *ngIf="!authService.loggedIn()" routerLink="/login">   <img src="assets/images/icons/login.png"><span class="icon" id="tex">Login</span></a>
+        </li>
+       
+
+
+        <!-- After Login Navbar Links -->
+        <li class="nav-item icon"*ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" *ngIf="authService.loggedIn()" routerLink="/astroservices"><img src="assets/images/icons/services.png" class="head" > <span class="icon" id="tex">Astro Services</span></a>
+        </li>
+        <li class="nav-item  icon">
+          <a class="nav-link" *ngIf="authService.loggedIn()" routerLink="/poojaservices">  <img src="assets/images/icons/pooja.png"><span class="icon" id="tex">Pooja Services</span></a>
+        </li>
+        <li class="nav-item icon">
+          <a class="nav-link" *ngIf="authService.loggedIn()" routerLink="/devoteeshop">   <img  src="assets/images/icons/shop.png"><span class="icon" id="tex" >Devotee Shop</span></a>
+        </li> 
+        <li class="nav-item icon ">
+          <a class="nav-link" *ngIf="authService.loggedIn()" routerLink="/talktoastrologers">    <img src="assets/images/icons/phone.png"><span class="icon" id="tex" >Talk to Astrologer</span></a>
+        </li> 
+        <li class="nav-item icon">
+          <a class="nav-link" *ngIf="authService.loggedIn()" routerLink="/piligrimages">   <img src="assets/images/icons/pilig.png"><span class="icon" id="tex">Piligrimages</span></a>
+        </li>
+        <li class="nav-item icon">
+          <a class="nav-link" *ngIf="authService.loggedIn()" routerLink="/onlinecourses">   <img src="assets/images/icons/class.png"><span class="icon" id="tex">Online Courses</span></a>
+        </li> 
+        <li class="nav-item dropdown">
+          <a class="nav-link" *ngIf="authService.loggedIn()" href="#" id="navbardrop" data-toggle="dropdown">
+              <img src="assets/images/icons/profile.png"><span class="icon" id="tex">{{auth.currentUser.username}}</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" (click)="goToProfile()">Profile</a>
+            <a class="dropdown-item" routerLink="/change-password">Change Password</a>
+            <a class="dropdown-item" href="#" (click)="onLogoutClick()">Logout</a>
+          </div>
+      </li>
+    </ul>  
+  </div>
+</nav>

@@ -1,0 +1,179 @@
+.body-container{
+	margin-top: 150px;
+}
+
+#hello{
+	text-align: center;
+}
+
+#path1{
+    padding: 30px;
+}
+
+#path2{
+    height: 220px;
+    width: 200px;
+    padding: 30px;
+}
+
+/* flip animation */
+.hello{
+	text-align: center;
+	margin-left: 10px;
+}
+
+#say{
+	padding-top: 40px;
+}
+
+.flip-container {
+	perspective: 800;
+}
+
+/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 220px;
+	height: 280px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.9s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+#wer{
+	background: #1E88E5;
+}
+#go{
+	background: #ff9800;
+}
+
+#weight{
+	width: 220px;
+}
+.class{
+	padding: 20px;
+	height: 170px;
+	font-size: 15px;
+	text-align: center;
+}
+#jk{
+	background: brown;
+}
+#serve{
+	padding: 15px;font-size: 15px;line-height: 21px;
+}
+#people{
+	padding:15px;
+}
+.col-md-6{
+	margin-bottom: 50px;
+}
+
+#new1{
+    padding-left:3%;
+  }
+  #space{
+    /* padding-left: 100px;
+     */
+     margin:auto;
+     /* margin-left: 0px; */
+     /* margin-right: 0px; */
+  }
+
+  a:link{
+    text-decoration: none;
+    
+  }
+  
+  
+  #style{
+    border:2px dashed orange;
+  }
+
+  @media(max-width: 576px) {
+    
+    body  .help{
+        margin-left:60px;
+    }
+
+}
+
+@media(max-width: 463px) {
+
+body  .help1{
+    margin-left:50px;
+}
+
+}
+
+/*         */
+
+@media(max-width: 768px) {
+    
+    body  .help2{
+        margin-left:50px;
+    }
+
+}
+.pad{
+    padding-left:200px;
+  }
+  div.scrollmenu {
+    /* background-color: #333; */
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    /* color: white; */
+    margin-left: 30px;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+}
+
+/* div.scrollmenu a:hover {
+    background-color: #777;
+} */
+
+@media only screen and (max-width: 500px) {
+    div.scrollmenu a {
+        display: inline-block;
+        /* color: white; */
+        text-align: center;
+        padding: 14px 30px;
+        text-decoration: none;
+    }
+}
+/* @media(max-width: 938px) {
+
+    body  .help1{
+    margin-top: 100px;
+    }
+    
+    } */

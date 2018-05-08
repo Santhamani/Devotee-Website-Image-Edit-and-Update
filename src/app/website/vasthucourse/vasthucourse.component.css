@@ -1,0 +1,96 @@
+.body-container{
+  margin-top:120px;
+}
+/* #new{ */
+    /* margin-top: 1%; */
+  /* } */
+  a:link{
+    text-decoration: none;
+    /* font-family: 'Lobster', cursive;
+  font-family: 'Great Vibes', cursive;
+  font-family: 'Berkshire Swash', cursive; */
+    /*padding-left: 50px;*/
+  }
+  
+   
+   h2{
+     /* background-color:aqua; */
+     color: orangered; 
+     /* border-radius: 50px; */
+     width: 15%;
+     padding-left: 10px;
+     /* font-family: 'Lobster', cursive;
+  font-family: 'Great Vibes', cursive;
+  font-family: 'Berkshire Swash', cursive; */
+    
+   }
+  
+   #zod{
+    /* margin-top: 50px; */
+    /* margin-bottom: 25px; */
+    padding: 20px;
+    /* font-family: 'Lobster', cursive;
+  font-family: 'Great Vibes', cursive;
+  font-family: 'Berkshire Swash', cursive; */
+  
+  }
+  
+  /* h5{
+    font-family: 'Lobster', cursive;
+  font-family: 'Great Vibes', cursive;
+  font-family: 'Berkshire Swash', cursive;
+  } */
+
+  /* #new1{
+    padding-left:3%;
+  } */
+  #space{
+    /* padding-left: 100px;
+     */
+     margin:auto;
+     /* margin-left: 0px; */
+     /* margin-right: 0px; */
+  }
+  
+  #style{
+    border:2px dashed orange;
+  }
+  
+   /* .pad{
+    padding-left:200px;
+  } */
+  div.scrollmenu {
+    /* background-color: #333; */
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    /* color: white; */
+    margin-left: 30px;
+    text-align: center;
+    /* padding: 14px 100px; */
+    text-decoration: none;
+}
+
+/* div.scrollmenu a:hover {
+    background-color: #777;
+} */
+
+@media only screen and (max-width: 500px) {
+    div.scrollmenu a {
+        display: inline-block;
+        /* color: white; */
+        text-align: center;
+        padding: 14px 30px;
+        text-decoration: none;
+    }
+}
+/* @media(max-width: 938px) {
+
+    body  .help1{
+    margin-top: 100px;
+    }
+    
+    } */

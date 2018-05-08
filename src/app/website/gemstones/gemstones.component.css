@@ -1,0 +1,39 @@
+.body-container{
+    margin-top: 130px;
+}
+
+p{
+    margin-top: 5px;
+}
+a:link{
+    text-decoration: none;
+    /* font-family: 'Lobster', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Berkshire Swash', cursive; */
+    /*padding-left: 50px;*/
+}
+
+#new{
+    padding-top:3%;
+}
+
+#space{
+    margin: auto;
+}
+
+#style{
+    border:2px dashed orange;
+}
+
+#zod{
+    margin-top: 10px;
+    /* margin-bottom: 1px; */
+    /* font-family: 'Lobster', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Berkshire Swash', cursive; */
+
+  }
+
+  .pad{
+    padding-left:70px;
+  }

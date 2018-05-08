@@ -1,0 +1,289 @@
+<h1 class="page-header">Blog Feed</h1>
+
+<!-- Custom Success/Error Message -->
+<div class="row show-hide-message" *ngIf="message && newPost">
+  <div [ngClass]="messageClass">
+    {{ message }}
+  </div>
+</div>
+
+<!-- New Post Button -->
+<button type="button" name="button" class="btn btn-warning" *ngIf="!newPost" (click)="newBlogForm()">New Post</button>
+
+<!-- Reload Button -->
+<button [disabled]="loadingBlogs" type="button" name="button" class="btn btn-default" *ngIf="!newPost" (click)="reloadBlogs()"><span class="glyphicon glyphicon-repeat"></span>&nbsp;&nbsp;Reload</button>
+
+<br />
+<br />
+
+<!-- New Blog Form -->
+<form [formGroup]="form" name="blogForm" (submit)="onBlogSubmit()" *ngIf="newPost">
+  <!-- Title Input -->
+  <div class="form-group">
+    <label for="title">Name</label>
+    <div [ngClass]="{'has-success': form.controls.title.valid, 'has-error': form.controls.title.dirty && form.controls.title.errors}">
+      <!-- Title Input -->
+      <input type="text" name="title" class="form-control" placeholder="*Enter your name" autocomplete="off" formControlName="title" />
+      <!-- Validation -->
+      <ul class="help-block">
+        <li *ngIf="form.controls.title.dirty && form.controls.title.errors?.required">This field is required.</li>
+        <li *ngIf="(form.controls.title.dirty && form.controls.title.errors?.minlength) || (form.controls.title.dirty && form.controls.title.errors?.maxlength)">Max length: 50, Min length: 5</li>
+        <li *ngIf="form.controls.title.dirty && form.controls.title.errors?.alphaNumericValidation">Must be a letter or number</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Name Input -->
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <div [ngClass]="{'has-success': form.controls.name.valid, 'has-error': form.controls.name.dirty && form.controls.name.errors}">
+      <!-- Title Input -->
+      <input type="text" name="name" class="form-control" placeholder="*Enter your fullname" autocomplete="off" formControlName="name" />
+      <!-- Validation -->
+      <ul class="help-block">
+        <li *ngIf="form.controls.name.dirty && form.controls.name.errors?.required">This field is required.</li>
+        <li *ngIf="(form.controls.name.dirty && form.controls.name.errors?.minlength) || (form.controls.name.dirty && form.controls.name.errors?.maxlength)">Max length: 5, Min length: 35</li>
+        <!-- <li *ngIf="form.controls.name.dirty && form.controls.name.errors?.nameValidation">Must be a letter or number</li> -->
+      </ul>
+    </div>
+  </div> 
+  
+  <!-- DOB Input -->
+  <div class="form-group">
+    <label for="date_of_birth">Date Of Birth</label>
+    <div [ngClass]="{'has-success': form.controls.date_of_birth.valid, 'has-error': form.controls.date_of_birth.dirty && form.controls.date_of_birth.errors}">
+      <!-- Title Input -->
+      <input type="text" name="date_of_birth" class="form-control" placeholder="*Enter your date_of_birth" autocomplete="off" formControlName="date_of_birth" />
+      <!-- Validation -->
+      <ul class="help-block">
+        <li *ngIf="form.controls.date_of_birth.dirty && form.controls.date_of_birth.errors?.required">This field is required.</li>
+        <!-- <li *ngIf="(form.controls.name.dirty && form.controls.name.errors?.minlength) || (form.controls.name.dirty && form.controls.name.errors?.maxlength)">Max length: 5, Min length: 35</li> -->
+        <li *ngIf="form.controls.date_of_birth.dirty && form.controls.date_of_birth.errors?.dobValidation">Must be a letter or number</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TOB Input -->
+  <div class="form-group">
+    <label for="time_of_birth">Time Of Birth</label>
+    <div [ngClass]="{'has-success': form.controls.time_of_birth.valid, 'has-error': form.controls.time_of_birth.dirty && form.controls.time_of_birth.errors}">
+      <!-- Title Input -->
+      <input type="time" name="time_of_birth" class="form-control" placeholder="*Enter your time_of_birth" autocomplete="off" formControlName="time_of_birth" />
+      <!-- Validation -->
+      <ul class="help-block">
+        <li *ngIf="form.controls.time_of_birth.dirty && form.controls.time_of_birth.errors?.required">This field is required.</li>
+        <!-- <li *ngIf="(form.controls.name.dirty && form.controls.name.errors?.minlength) || (form.controls.name.dirty && form.controls.name.errors?.maxlength)">Max length: 5, Min length: 35</li> -->
+        <!-- <li *ngIf="form.controls.time_of_birth.dirty && form.controls.time_of_birth.errors?.tobValidation">Must be a letter or number</li> -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Raasi Input -->
+  <div class="form-group">
+    <label for="raasi">Raasi</label>
+    <div [ngClass]="{'has-success': form.controls.raasi.valid, 'has-error': form.controls.raasi.dirty && form.controls.raasi.errors}">
+      <!-- Title Input -->
+      <input type="text" name="raasi" class="form-control" placeholder="*Enter your Raasi" autocomplete="off" formControlName="raasi" />
+      <!-- Validation -->
+      <ul class="help-block">
+        <li *ngIf="form.controls.raasi.dirty && form.controls.raasi.errors?.required">This field is required.</li>
+        <li *ngIf="(form.controls.raasi.dirty && form.controls.raasi.errors?.minlength) || (form.controls.raasi.dirty && form.controls.raasi.errors?.maxlength)">Max length: 5, Min length: 35</li>
+        <!-- <li *ngIf="form.controls.name.dirty && form.controls.name.errors?.nameValidation">Must be a letter or number</li> -->
+      </ul>
+    </div>
+  </div> 
+
+   <!-- nakshatram Input -->
+  <div class="form-group">
+      <label for="nakshatram">Nakshatram</label>
+      <div [ngClass]="{'has-success': form.controls.nakshatram.valid, 'has-error': form.controls.nakshatram.dirty && form.controls.nakshatram.errors}">
+        <!-- Title Input -->
+        <input type="text" name="nakshatram" class="form-control" placeholder="*Enter your NAkshatram" autocomplete="off" formControlName="nakshatram" />
+        <!-- Validation -->
+        <ul class="help-block">
+          <li *ngIf="form.controls.nakshatram.dirty && form.controls.nakshatram.errors?.required">This field is required.</li>
+          <li *ngIf="(form.controls.nakshatram.dirty && form.controls.nakshatram.errors?.minlength) || (form.controls.nakshatram.dirty && form.controls.nakshatram.errors?.maxlength)">Max length: 5, Min length: 35</li>
+          <!-- <li *ngIf="form.controls.name.dirty && form.controls.name.errors?.nameValidation">Must be a letter or number</li> -->
+        </ul>
+      </div>
+    </div>  
+    
+  <!-- Birth Location Input -->
+  <div class="form-group">
+      <label for="birth_location">Birth Location</label>
+      <div [ngClass]="{'has-success': form.controls.birth_location.valid, 'has-error': form.controls.birth_location.dirty && form.controls.birth_location.errors}">
+        <!-- Title Input -->
+        <input type="text" name="birth_location" class="form-control" placeholder="*Enter your Birth Location" autocomplete="off" formControlName="birth_location" />
+        <!-- Validation -->
+        <ul class="help-block">
+          <li *ngIf="form.controls.birth_location.dirty && form.controls.birth_location.errors?.required">This field is required.</li>
+          <li *ngIf="(form.controls.birth_location.dirty && form.controls.birth_location.errors?.minlength) || (form.controls.nakshatram.dirty && form.controls.birth_location.errors?.maxlength)">Max length: 5, Min length: 35</li>
+          <!-- <li *ngIf="form.controls.name.dirty && form.controls.name.errors?.nameValidation">Must be a letter or number</li> -->
+        </ul>
+      </div>
+  </div> 
+  
+  <!-- Gender Input -->
+  <div class="form-group">
+      <label for="gender">Gender</label>
+      <div [ngClass]="{'has-success': form.controls.gender.valid, 'has-error': form.controls.gender.dirty && form.controls.gender.errors}">
+        <!-- Title Input -->
+        <input type="text" name="gender" class="form-control" placeholder="*Enter your Gender" autocomplete="off" formControlName="gender" />
+        <!-- Validation -->
+        <ul class="help-block">
+          <li *ngIf="form.controls.gender.dirty && form.controls.gender.errors?.required">This field is required.</li>
+          <!-- <li *ngIf="(form.controls.birth_location.dirty && form.controls.birth_location.errors?.minlength) || (form.controls.nakshatram.dirty && form.controls.birth_location.errors?.maxlength)">Max length: 5, Min length: 35</li> -->
+          <!-- <li *ngIf="form.controls.name.dirty && form.controls.name.errors?.nameValidation">Must be a letter or number</li> -->
+        </ul>
+      </div>
+  </div>
+  
+  <!-- Address Input -->
+  <div class="form-group">
+    <label for="address">Gender</label>
+    <div [ngClass]="{'has-success': form.controls.address.valid, 'has-error': form.controls.address.dirty && form.controls.address.errors}">
+      <!-- Title Input -->
+      <input type="text" name="address" class="form-control" placeholder="*Enter your Address" autocomplete="off" formControlName="address" />
+      <!-- Validation -->
+      <ul class="help-block">
+        <li *ngIf="form.controls.address.dirty && form.controls.address.errors?.required">This field is required.</li>
+        <!-- <li *ngIf="(form.controls.birth_location.dirty && form.controls.birth_location.errors?.minlength) || (form.controls.nakshatram.dirty && form.controls.birth_location.errors?.maxlength)">Max length: 5, Min length: 35</li> -->
+        <!-- <li *ngIf="form.controls.name.dirty && form.controls.name.errors?.nameValidation">Must be a letter or number</li> -->
+      </ul>
+    </div>
+</div>
+
+<!-- Phone Number Input -->
+<div class="form-group">
+  <label for="phoneno">Gender</label>
+  <div [ngClass]="{'has-success': form.controls.phoneno.valid, 'has-error': form.controls.phoneno.dirty && form.controls.phoneno.errors}">
+    <!-- Title Input -->
+    <input type="text" name="phoneno" class="form-control" placeholder="*Enter your Phone Number" autocomplete="off" formControlName="phoneno" />
+    <!-- Validation -->
+    <ul class="help-block">
+      <li *ngIf="form.controls.phoneno.dirty && form.controls.phoneno.errors?.required">This field is required.</li>
+      <li *ngIf="(form.controls.phoneno.dirty && form.controls.phoneno.errors?.minlength) || (form.controls.phoneno.dirty && form.controls.phoneno.errors?.maxlength)">Max length: 10, Min length: 15</li>
+      <li *ngIf="form.controls.phoneno.dirty && form.controls.phoneno.errors?.phonenoValidation">Must be a only valid phone number</li>
+    </ul>
+  </div>
+</div>
+
+  
+  <!-- Body Input -->
+  <div class="form-group">
+    <label for="body">Body</label>
+    <div [ngClass]="{'has-success': form.controls.body.valid, 'has-error': form.controls.body.dirty && form.controls.body.errors}">
+      <!-- Body Input -->
+      <textarea name="body" rows="8" cols="80" placeholder="*Body" class="form-control" formControlName="body"></textarea>
+      <!-- Validation -->
+      <ul class="help-block">
+        <li *ngIf="form.controls.body.dirty && form.controls.body.errors?.required">This field is required.</li>
+        <li *ngIf="(form.controls.body.dirty && form.controls.body.errors?.minlength) || (form.controls.body.dirty && form.controls.body.errors?.maxlength)">Max length: 500, Min length: 5</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Go Back Button -->
+  <button [disabled]="processing" type="button" name="button" (click)="goBack()" class="btn btn-warning">Go Back</button>
+  <!-- Submit Button -->
+  <button [disabled]="processing || !form.valid" type="submit" name="button" class="btn btn-success">Submit</button>
+
+</form>
+<!-- New Blog Form -->
+
+<!-- Panel Start -->
+<div *ngIf="!newPost">
+  <!-- Panel Outer Layer -->
+  <div class="panel panel-primary" *ngFor="let blog of blogPosts">
+
+    <!-- Panel Title -->
+    <div class="panel-heading">
+      <h5 class="panel-title">{{ blog.title }}</h5>
+    </div>
+
+    <!-- Panel Body -->
+    <div class="panel-body">
+      <div>
+      <h5>Name:</h5>  {{ blog.name }}
+      </div>
+      <div>
+        <h5>Date of Birth</h5>{{ blog.date_of_birth }}
+      </div>
+      <div>
+        <h5>Time of Birth</h5>{{ blog.time_of_birth }}
+      </div>
+      <div>
+        <h5>Raasi</h5>  {{ blog.raasi }}
+        <h5>Nakshatram</h5>  {{ blog.nakshatram }}
+        <h5>Birth Location</h5>  {{ blog.birth_location }}
+        <h5>Gender</h5> {{ blog.gender }}
+        <h5>Address</h5> {{ blog.address }}
+        <h5>Phone Number</h5> {{ blog.phoneno }}
+      </div>
+      <h5>Message:</h5>{{ blog.body }}
+    </div>
+
+    
+
+    <!-- Panel Footer Start -->
+    <div class="panel-footer">
+      <strong>Posted by: </strong>{{ blog.createdBy }}
+      <br />
+      <strong>Date: </strong>{{ blog.createdAt | date:'MMM dd, yyyy' }}
+      <br />
+      <div *ngIf="username === blog.createdBy">
+        <strong>Likes: </strong>{{ blog.likes }}
+        <br />
+        <strong>Dislikes: </strong>{{ blog.dislikes }}
+      </div>
+
+      <!-- Edit Button -->
+      <a [routerLink]="['/edit-blog/', blog._id]" *ngIf="username === blog.createdBy"><button type="button" name="button" class="btn btn-sm btn-info">Edit</button></a>
+      <!-- Delete Button -->
+      <a [routerLink]="['/delete-blog/', blog._id]" *ngIf="username === blog.createdBy"><button type="button" name="button" class="btn btn-sm btn-danger">Delete</button></a>
+
+      <!-- Likes Dropdown  -->
+      <div class="dropdown">
+        <!-- Like Button -->
+        <button type="button" name="button" class="btn btn-sm btn-success" *ngIf="username !== blog.createdBy"><span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>Likes: 21</button>
+        <!-- Dropdown Menu Items -->
+        <div class="dropdown-content">
+          <a href="#">gugui3z24</a>
+          <a href="#">jinder</a>
+          <a href="#">patel</a>
+        </div>
+      </div>
+
+      <!-- Dislikes Dropdown  -->
+      <div class="dropdown">
+        <!-- Dislike Button -->
+        <button type="button" name="button" class="btn btn-sm btn-warning" *ngIf="username !== blog.createdBy"><span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>Dislikes: 15</button>
+        <!-- Dropdown Menu Items -->
+        <div class="dropdown-content">
+          <a href="#">gugui3z24</a>
+          <a href="#">jinder</a>
+          <a href="#">patel</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- Panel Footer End -->
+
+    <!-- Post Comment Box: Start -->
+    <ul class="list-group">
+      <li class="list-group-item">
+        <button type="button" name="button" class="btn btn-sm btn-danger" (click)="draftComment()">Post Comment</button>
+        <br />
+        <!-- <form>
+          <textarea name="comment" rows="10" cols="30" class="form-control"></textarea>
+          <button type="button" name="button" class="btn btn-sm btn-info">Submit Post</button>
+          <button type="button" name="button" class="btn btn-sm btn-danger">Cancel</button>
+        </form> -->
+      </li>
+    </ul>
+    <!-- Post Comment Box: End -->
+
+  </div>
+  <!-- Panel Outer Layer -->
+</div>
+<!-- Panel End -->

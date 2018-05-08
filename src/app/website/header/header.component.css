@@ -1,0 +1,57 @@
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(240,80,60)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+
+.icon{
+    display: block;
+    font-family: "Courier-new";
+    text-align: center;
+    
+    }  
+    .img{
+      width: 30px;
+    }
+    
+    body{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+    }
+    
+    .content{
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    min-height: 200px;
+    }
+    
+    
+    .icon{
+    margin-right: 2px;
+    
+    } 
+    
+    #tex{
+    font-size: 14px;
+    color: #F0503C;
+    font-weight: bold;
+      }
+    
+    #mod{
+    width: auto;
+    
+    }
+    
+    .menu{
+    background-color:white;
+    
+    }
+    
+    /* .dropdown-menu{
+      min-width: 10px;
+      left: -20px;
+   } */

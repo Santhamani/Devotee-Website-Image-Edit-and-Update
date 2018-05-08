@@ -1,0 +1,125 @@
+
+.body-container{
+    margin-top: 120px;
+}
+
+   .search{
+    padding-bottom: 30px;
+}
+.place{
+    margin-top: 20px;
+}
+
+#top{
+    background-color: #f2f3f3;
+    /* margin-top: 30px; */
+}
+
+#class{
+    padding-top: 10px;
+}
+
+
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    background-color: rgba(214, 224, 226, 0.2);
+}
+
+.avatar {
+    background-color: rgba(214, 224, 226, 0.2);
+    width: 0px;
+    position: relative;
+    left: 70px;
+    top: -60px;
+    margin-bottom: 50px;
+}
+
+ .avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+}
+
+ .info {
+    padding: 4px 8px 10px;
+    margin-top: -90px;
+    text-align: center;
+}
+
+ .info .title {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #262626;
+    vertical-align: middle;
+}
+
+ .info .desc {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+#hr{
+     border: 2px solid #9aadbc;
+     padding: 0px;
+}
+
+#last{
+     background-size: cover; 
+}
+#primary{
+    padding: 20px;
+    text-align: center;
+}
+
+       
+
+h1{
+    margin-left:41%;
+    margin-bottom: 20px;
+}
+.new{
+    margin-left: 45%;
+}
+
+#sub{
+    text-align:center;
+    padding-bottom: 30px;
+}
+#talk{
+    padding-top: 50px;
+}
+
+#cath{
+    margin-top: 50px;
+}
+#hark{
+    height: 150px;
+}
+.hath{
+    color: #007bab;
+    margin-top: 20px;
+}
+#jack{
+    margin-top: 30px;
+}
+.fryend{
+    margin-top: 20px;
+    border-top: 1px solid rgb(239, 239, 240);
+}
+#hello{
+    margin-bottom: 50px;
+}
+
+#zod{
+  
+    padding-top: 20px;
+   
+  }

@@ -1,0 +1,153 @@
+
+<!-- 
+<div class="body-container">
+    <p>
+        profile works!
+      </p>
+      <h1>{{ auth.currentUser.username}}</h1>
+      <h1>{{ auth.currentEmail.email}}</h1>
+</div> -->
+
+<div class="container body-container">
+
+ 
+
+    <table class="table table-hover">
+        <thead>
+          <th>
+            User Name
+          </th>
+          <th>
+            Email
+          </th>
+        </thead>
+        <tbody>
+          <td>
+              {{ auth.currentUser.username }}
+          </td>
+          <td>
+              {{ auth.currentEmail.email }}
+          </td>
+        </tbody>
+      </table>
+  
+        <app-toast [message]="toast.message"></app-toast>
+
+       
+          <section class="hero">
+                <p class="mt-4 text lead text-center">
+                        Update Your Profile here
+                    </p>
+              <div class="container">
+                  <!-- <div class="row"> -->
+                      <!-- <div class="col-md-6 col-sm-6"> -->
+                          <!-- <div class="card border-none"> -->
+                              <!-- <div class="card-body"> -->
+                             
+                                
+                                  <!-- <div class="mt-4"> -->
+                                      <form  [formGroup]="profileForm" (ngSubmit)="addprofile()">
+
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                                <p class="h2">Personal Information</p><hr>
+                                                <div class="col-lg-6"><b>First Name</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassFName()">
+                                                    <input class="form-control" type="text" name="fname" formControlName="fname" placeholder="First Name">
+                                                </div>
+                                                <div class="col-lg-6"><b>Last Name</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassLName()">
+                                                    <input class="form-control" type="text" name="lname" formControlName="lname" placeholder="Last Name">
+                                                </div>
+                                                <div class="col-lg-6"><b>Phone No</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassPhoneno()">
+                                                    <input class="form-control" type="text" name="phoneno" formControlName="phoneno" placeholder="Contact Number">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-xs-12  d-flex justify-content-center">
+                                                <fieldset class="form-group">
+                                                    <input #fileInput (change)="onFileSelected($event)" class="image d-flex justify-content-center" type="file" placeholder="Upload file..." name="file" multiple="multiple" />
+                                                    <div class="image d-flex justify-content-center" style="height:250px;width:250px;border:thin solid black">
+                                                        <div *ngIf="proimage">
+                                                                <img [src]="proimage" alt="profile pic" height="250" width="250">
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-info btn-md" (click)="onUpload()">Upload</button>
+                                                </fieldset>
+                                                <br>
+                                            </div>
+                                        </div>
+
+                                        <p class="h2">Biodata Infomation</p><hr>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="col-lg-6"><b>Date of Birth</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassDateOfBirth()">
+                                                    <input class="form-control" type="text" name="dateofbirth" formControlName="dateofbirth" placeholder="Date Of Birth">
+                                                </div>
+                                                <div class="col-lg-6"><b>Place of Birth</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassPlaceOfBirth()">
+                                                    <input class="form-control" type="text" name="placeofbirth" formControlName="placeofbirth"  placeholder="Place of Birth">
+                                                </div>
+                                                <div class="col-lg-6"><b>Time of Birth</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassTimeOfBirth()">
+                                                    <input class="form-control" type="text" name="timeofbirth" formControlName="timeofbirth" placeholder="Time Of Birth" autofocus>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                                <div class="col-lg-6"><b>Raasi</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassRaasi()">
+                                                    <input class="form-control" type="text" name="raasi" formControlName="raasi" placeholder="Raasi">
+                                                </div>
+                                                <div class="col-lg-6"><b>Nakshtram</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassNakshatram()">
+                                                    <input class="form-control" type="text" name="nakshatram" formControlName="nakshatram" placeholder="Nakshatram">
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                        <p class="h2">Contact Information</p><hr>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                                <div class="col-lg-6"><b>House No./ Door No./ Plat No.</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassHouseNo()">
+                                                    <input class="form-control" type="text" name="houseno" formControlName="houseno" placeholder="House No/ Flat No">
+                                                </div>
+                                                <div class="col-lg-6"><b>Street/ Land Mark</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassStreet()">
+                                                    <input class="form-control" type="text" name="street" formControlName="street" placeholder="Street/Landmark">
+                                                </div>
+                                                <div class="col-lg-6"><b>City/ Village/ Town</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassCity()">
+                                                    <input class="form-control" type="text" name="city" formControlName="city" placeholder="City/ Town/ Village">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                                <div class="col-lg-6"><b>Zip Code</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassPin()">
+                                                    <input class="form-control" type="text" name="pin" formControlName="pin" placeholder="Pin Code">
+                                                </div>
+                                                <div class="col-lg-6"><b>State</b></div>
+                                                <div class="form-group input-field col s8"  [ngClass]="setClassState()">
+                                                    <input class="form-control" type="text" name="state" formControlName="state" placeholder="State">
+                                                </div>
+                                            </div>
+                                        </div>
+                                           
+                                          
+                                         
+
+                                          <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid"><i class="fa fa-user-plus"></i>Save Profile</button>
+                                      </form>
+                                  <!-- </div> -->
+                              <!-- </div> -->
+                          <!-- </div> -->
+                      <!-- </div> -->
+                        
+                  </div>
+          </section>
+</div>
+
+

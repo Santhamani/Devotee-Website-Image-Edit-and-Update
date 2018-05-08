@@ -1,0 +1,180 @@
+
+.body-container{
+    margin-top: 80px;
+  }
+  
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    
+  }
+  .container-fluid{
+  padding-right: 0px;
+  padding-left: 0px;
+  }
+  
+  a:link{
+  text-decoration: none;
+  /* font-family: 'Lobster', cursive;
+  font-family: 'Great Vibes', cursive;
+  font-family: 'Berkshire Swash', cursive; */
+  /*padding-left: 50px;*/
+  }
+  
+  
+  
+  #zod{
+  margin-top: 50px;
+  margin-bottom: 25px;
+  }
+  /* #zod1{
+  margin-top: 50px;
+  
+  } */
+  
+  .new{
+  margin-top: 3%;
+  }
+  
+  #font{
+  color:black;
+  
+  }
+  
+  
+  
+  /* price */
+  
+  #button{
+  /* padding-left: 70px; */
+  padding-top: 30px;
+  
+  } 
+  #new{
+  padding-bottom: 15px;
+  }
+  p{
+  text-align: justify;
+  }
+  .columns {
+  float: left;
+  /* width: 33%; */
+  padding: 10px;
+  }
+  #font{
+  color:black;
+  
+  }
+  .price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  }
+  
+  .price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+  }
+  
+  .price .header {
+  background-color: #111;
+  color: white;
+  font-size: 15px;
+  }
+  
+  .price li {
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  text-align: center;
+  }
+  
+  .price .grey {
+  background-color: #eee;
+  font-size: 20px;
+  }
+  
+  .button {
+  background-color: rgb(254,167,6);
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  }
+  #left{
+  margin-left:-80%; 
+  }
+  
+  #left1{
+  margin-left:-70%; 
+  }
+  
+  /* @media(max-width: 576px) {
+  
+  body  .help{
+      margin-left:150px;
+  }
+  
+  }
+  
+  
+  @media(max-width: 463px) {
+  
+  body  .help1{
+  margin-left:70px;
+  }
+  
+  } */
+  
+  .pad{
+  padding-left:100px;
+  }
+  
+  
+  #zod1{
+  padding-top: 30px;
+  }
+  
+  
+  #zod{
+      margin-top: 50px;
+      margin-bottom: 25px;
+      
+  
+    }
+  #font{
+  color:black;
+  
+  }
+  
+  .space{
+  margin-left: 3%;
+  }
+  
+  @media(max-width: 576px) {
+  
+  .help{
+  margin-left: 100px;
+  }
+  
+  } 
+  
+  @media(max-width: 462px) {
+  
+      .help{
+     margin-left: 50px;
+         }
+         
+         }
+  
+  #bus{
+      /* padding-top: 10px; */
+      width:100%;
+  }
+  
+  .b1{
+      margin-top: 20px;
+  }

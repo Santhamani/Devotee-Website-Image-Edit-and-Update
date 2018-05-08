@@ -1,0 +1,38 @@
+.bs-example{
+    margin: 20px;
+  }
+/* 
+  .body-container{
+    margin-top: 90px;
+  }
+    */
+a:link,h5{
+    text-decoration: none;
+   color: orangered;
+  }
+
+  p {
+    font: 1em/1.5; 
+    margin-top: 15px; 
+    margin-bottom: 1.5em; 
+    text-align: justify;
+
+  }
+  
+  
+
+ @media only screen and (min-width: 32em) {
+    p {
+      line-height: 1.75em;
+      margin-bottom: 1.75em; 
+     
+    }
+  } 
+  #zod{
+    /* margin-top: 50px; */
+    /* margin-bottom: 25px; */
+    padding-top: 20px;
+    /* margin-left: 50px; */
+    
+  }
+ 

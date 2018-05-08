@@ -1,0 +1,41 @@
+
+    <div class="container">
+      <h1>Customer</h1>
+      <p>First Name</p>
+      <input [(ngModel)]="fname" type="text" class="form-control">
+  
+      <p>Last Name</p>
+      <input [(ngModel)]="lname" type="text" class="form-control">
+  
+      <p>Date of Birth</p>
+      <input [(ngModel)]="dob" type="text" class="form-control">
+  
+      <p>Phone No</p>
+      <input [(ngModel)]="phoneno" type="text" class="form-control">
+  
+      <p>Raasi</p>
+      <input [(ngModel)]="raasi" type="text" class="form-control">
+  
+      <p>Time of Birth</p>
+      <textarea [(ngModel)]="tob" class="form-control" rows="3"></textarea>
+  
+      <p>Nakshatram</p>
+      <input [(ngModel)]="nakshatram" type="text" class="form-control">
+      
+      <p>Place of Birth</p>
+      <input [(ngModel)]="pob" type="text" class="form-control">
+
+      <p>Address</p>
+      <input [(ngModel)]="address" type="text" class="form-control">
+
+      <p>Caste</p>
+      <input [(ngModel)]="caste" type="text" class="form-control">
+
+      <p>Religion</p>
+      <input [(ngModel)]="religion" type="text" class="form-control">
+
+      <p>Remarks</p>
+      <input [(ngModel)]="remarks" type="text" class="form-control">
+  
+      <Button (click)="addCustomer()" class="btn btn-primary">Submit</Button>
+  </div>

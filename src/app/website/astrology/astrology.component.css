@@ -1,0 +1,183 @@
+.body-container{
+    margin-top:150px;
+}
+#button{
+    /* padding-left: 70px; */
+    padding-top: 30px;
+    
+} 
+#new{
+    padding-bottom: 15px;
+}
+p{
+    text-align: justify;
+}
+.columns {
+    float: left;
+    /* width: 33%; */
+    padding: 10px;
+}
+#left{
+    margin-left:-80%; 
+}
+#path{
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 50px;
+    margin-left: 20px;
+    background-color:  rgb(254,167,6);
+  }
+  
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 15px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: rgb(254,167,6);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+.space{
+    margin-left: 10%;
+}
+.myTab{
+    margin-left: 50px;
+}
+.tab-pane{
+    text-align: justify;
+}
+/* .space1{
+    margin-left: 7%;
+} */
+
+@media(max-width: 576px) {
+    
+        body  .help{
+            margin-left:110px;
+        }
+    
+}
+
+
+
+@media(max-width: 463px) {
+    
+    body  .help1{
+        margin-left:10px;
+    }
+
+}
+
+p {
+    font: 1em/1.5; 
+    margin-top: 0; 
+    margin-bottom: 1.5em; 
+  }
+  
+  @media only screen and (min-width: 32em) {
+    p {
+      line-height: 1.75em;
+      margin-bottom: 1.75em; 
+     
+    }
+  }
+
+
+#zod1{
+    padding-top: 30px;
+    }
+
+    
+    #zod{
+        margin-top: 50px;
+        margin-bottom: 25px;
+       
+      }
+  #font{
+    color:black;
+    
+   }
+
+   /* #new{
+    
+    padding-left: 20%; 
+   
+} */
+
+
+/* p {
+    font: 1em/1.5; 
+    margin-top: 0; 
+    margin-bottom: 1.5em; 
+  }
+  
+  @media only screen and (min-width: 32em) {
+    p {
+      line-height: 1.75em;
+      margin-bottom: 1.75em; 
+     
+    }
+  } */
+ 
+  .form-group{
+    color: #d2d2d1;
+  }
+  .single{
+    color: #9eafc4;
+  }
+  #color{
+    padding-top: 30px; 
+  }
+  
+.pad{
+    padding-left:100px;
+}
+  
+  /* #new1{
+    padding-left:3%;
+  } */
+  /* td{
+      empty-cells: show;
+  } */
+  
+  #space{
+      margin-left: 30px;
+  }
+  #style{
+    border:2px dashed orange;
+  }
+
+  a:link{
+    text-decoration: none;
+    
+}

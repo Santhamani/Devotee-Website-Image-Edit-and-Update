@@ -1,0 +1,63 @@
+.body-container{
+  margin-top: 150px;
+}
+
+
+#zod{
+    margin-top: 50px;
+    margin-bottom: 25px;
+    
+  }
+  a:link{
+    text-decoration: none;
+    
+  }
+  
+
+ li{
+   list-style-type:none;
+   padding-top: 5px;
+  
+ }
+
+  
+
+.pad{
+  padding-left:250px;
+}
+
+
+p {
+  font: 1em/1.5 Arial, Helvetica, sans-serif; 
+  margin-top: 0; 
+  margin-bottom: 1.5em; 
+  text-align: justify;
+}
+
+@media only screen and (min-width: 32em) {
+  p {
+    line-height: 1.75em;
+    margin-bottom: 1.75em; 
+   
+  }
+}
+
+#new1{
+  padding-left:3%;
+}
+#space{
+  /* padding-left: 100px;
+   */
+   margin:auto;
+   /* margin-left: 0px; */
+   /* margin-right: 0px; */
+}
+
+#style{
+  border:2px dashed orange;
+}
+
+a:link{
+  text-decoration: none;
+ 
+}
